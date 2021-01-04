@@ -1,7 +1,4 @@
-let btn = document.querySelector('.btn');
-btn.addEventListener('click', e => {
-    e.preventDefault();
-});
+
 
 function onSubmit() {
   console.log(document.movie.movieName.value)
@@ -34,3 +31,7 @@ function displayResults(results) {
     document.getElementById('cbody').innerHTML = movie;
 
 }
+let btn = document.querySelector('.btn');
+btn.addEventListener('click', e => {
+    e.preventDefault();
+});
