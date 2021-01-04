@@ -1,9 +1,14 @@
+let btn = document.querySelector('.btn');
+btn.addEventListener('click', e => {
+    e.preventDefault();
+});
 
 function onSubmit() {
-    let btn = document.movie.movieName.value;
+  console.log(document.movie.movieName.value)
     fetch(`http://www.omdbapi.com/?apikey=fd1533a4&s=${document.movie.movieName.value}`).then(res => {
         return res.json();
     }).then(data => {
+      console.log(data)
         displayResults(data);
     });
     document.movie.movieName.value = ""
